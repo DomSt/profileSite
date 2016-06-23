@@ -1,0 +1,24 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+
+# Site settings
+title: Hi, I'm Dom
+email: dominik.stoecklein@gmail.com
+description: > #
+  Dominik Stöcklein is da digital product designer with a liking to create
+  products people use to get stuff done.
+  He is living and working in nuremberg, germany.
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: dstoecklein
+github_username:  DomSt
+
+
+# Build settings
+markdown: kramdown
+permalink: :title

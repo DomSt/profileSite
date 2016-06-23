@@ -1,0 +1,14 @@
+---
+layout: default
+title: Dom | Blog Status
+permalink: /blog-status/
+---
+
+
+<ul class="status-list">
+    {% for post in site.categories.blogstatus %}
+      <li>
+      	{{ post.content }}
+      </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,15 @@
+
+
+.l-pageWrapper {
+	display: flex;
+	flex-direction: column;
+	margin: .75rem;
+	min-height: calc(100vh - 1.5rem);
+	border-radius: $border-radius;
+	background: $c-white;
+}
+
+.l-pageContent {
+	flex: 1;
+	padding: 3rem;
+}
