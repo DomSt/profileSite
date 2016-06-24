@@ -1,0 +1,16 @@
+
+
+//------------------------------------------------------------------------------
+// Media Queries
+@mixin respond-to($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value != null {
+    @media screen and (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "No value retrieved from `#{$breakpoint}`. "
+        + "Please use values defined in `$breakpoints` map.";
+  }
+}

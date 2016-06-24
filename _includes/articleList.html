@@ -1,0 +1,29 @@
+
+
+<ul class="articleList">
+
+	{% for post in site.categories.article %}
+
+	<li class="articleList__item">
+
+		<article class="articlePrev">
+		  <header>
+		    <span class="articlePrev__subject">{{ post.subject }}</span>
+		    <span class="articlePrev__date">{{ post.date | date: "%B, %Y" }}</span>
+		  </header>
+		  <div class="articlePrev__morphBG"></div>
+		  <div class="articlePrev__innerWrapper">
+		    <h2 class="articlePrev__title">{{ post.headline1 }} <span class="articlePrev__title--highlight">{{ post.headline2 }}</span>
+		    </h2>
+		    <p class="articlePrev__excerpt">{{ post.excerpt | remove: "<p>" | remove: "</p>" }}</p>
+		  </div>
+		  <footer class="articlePrev__meta">
+		    <span class="articlePrev__label">{{ post.labels }}</span>
+		  </footer>
+		</article>
+
+	</li>
+
+	{% endfor %}
+
+</ul>

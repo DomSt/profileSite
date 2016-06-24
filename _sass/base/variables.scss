@@ -13,3 +13,13 @@ $c-white: #ffffff;
 //------------------------------------------------------------------------------
 // Size & Length Variables
 $border-radius: 3px;
+
+
+//------------------------------------------------------------------------------
+// Media Querie Breakpoints   468px | 630px | 900px | 1170px
+$breakpoints: (
+  "small"   : 26rem,
+  "medium"  : 35rem,
+  "large"   : 50rem,
+  "xlarge"  : 65rem
+);

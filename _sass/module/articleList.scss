@@ -1,0 +1,118 @@
+
+
+.articleList {
+	margin-bottom: 3rem;
+	margin-left: 40%;
+	width: 50%;
+}
+
+
+.articlePrev {
+  position: relative;
+  color: $c-main;
+
+  &__innerWrapper {
+    position: relative;
+    margin: 1.5rem 0;
+  }
+
+  &__morphBG {
+    position: absolute;
+    z-index: 10;
+    margin-top: calc(.75rem - 1px);
+    width: 15%;
+    height: 2px;
+    min-height: 2px;
+    background: $c-main;
+    //reduce jank caused by transform of width / height.
+    //can't use transform scale because of dynamic
+    //target height and fixed starting height.
+    transform: scaleZ(1);
+    transition: width .55s cubic-bezier(0.68, -0.3, 0.265, 1.35),
+                height .55s cubic-bezier(0.68, -0.3, 0.265, 1.35),
+                border-radius .4s ease-in-out .1s;
+    pointer-events: none;
+  }
+
+  &__subject,
+  &__date,
+  &__meta {
+    font-family: monospace;
+    font-size: .75rem;
+    pointer-events: none;
+  }
+
+  &__date { float: right; }
+
+  &__meta {
+    transition: opacity .5s cubic-bezier(0.68, 0, 0.265, 1.55),
+                visibility 0s,
+                transform .5s cubic-bezier(0.68, 0, 0.265, 1.55);
+  }
+
+  &__title {
+    margin-top: 0;
+    font-size: 1.25rem;
+    transition: opacity .5s cubic-bezier(0.68, 0, 0.265, 1.55) .1s,
+                visibility 0s,
+                transform .5s cubic-bezier(0.68, 0, 0.265, 1.55) .1s;
+
+    &--highlight { color: $c-highlight; }
+  }
+
+  &__excerpt {
+    position: absolute;
+    top: .25rem;
+    z-index: 20;
+    margin: 0;
+    padding-left: 1.5rem;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-5em);
+    transition: transform .3s ease-out .1s,
+                opacity .3s ease-out .1s,
+                visibility 0s .4s;
+  }
+}
+
+
+
+.articlePrev:hover {
+  & .articlePrev__title {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4rem);
+    transition: opacity .2s ease-in .1s,
+                visibility 0s .3s,
+                transform .2s ease-in .1s;
+  }
+
+  & .articlePrev__meta {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(3rem);
+    transition: opacity .2s ease-in .2s,
+                visibility 0s .4s,
+                transform .2s ease-in .2s;
+  }
+
+  & .articlePrev__morphBG {
+    width: 110%;
+    height: 90%;
+    border-radius: 0 6em 6em 6em;
+    transition: width .55s cubic-bezier(0.68, -0.3, 0.265, 1.35),
+                height .55s cubic-bezier(0.68, -0.3, 0.265, 1.35),
+                border-radius .4s ease-in-out;
+  }
+
+  & .articlePrev__excerpt {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity .5s cubic-bezier(0.68, 0, 0.265, 1.55) .1s,
+                visibility 0s,
+                transform .5s cubic-bezier(0.68, 0, 0.265, 1.55) .1s;
+  }
+}
