@@ -1,7 +1,7 @@
 
 
 .teaser {
-	margin: 4.5rem auto;
+	margin: 3rem auto;
 	padding: 1.5rem;
 	width: 62.5%;
 	color: $c-white;
@@ -9,15 +9,9 @@
 	text-align: center;
 	border-radius: $border-radius;
 	@include bgEffect($c-main, 2.5%);
-	// background: $c-main;
-
-	&__title {
-		font-size: 1.25rem;
-	}
 
 	&__info {
 		margin-top: .75rem;
-		font-size: 1rem;
 	}
 
 	a {
