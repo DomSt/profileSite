@@ -2,11 +2,11 @@
 
 //------------------------------------------------------------------------------
 // Media Queries
-@mixin respond-to($breakpoint) {
+@mixin respond-to($breakpoint, $height: 450px) {
   $value: map-get($breakpoints, $breakpoint);
 
   @if $value != null {
-    @media screen and (min-width: $value) {
+    @media screen and (min-width: $value) and (min-height: $height) {
       @content;
     }
   } @else {
