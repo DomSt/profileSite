@@ -40,7 +40,7 @@
   }
 }
 
-@include respond-to(large, 580px) {
+@include respond-to(large, 36rem) {
   .intro {
     font-size: 1.25rem;
   }
