@@ -37,3 +37,13 @@
 		top: 3rem;
 	}
 }
+
+@include respond-to(xlarge, 42rem) {
+	.pageHeader {
+		top: 4.5rem;
+	}
+
+	.logo__text {
+		font-size: 1.25rem;
+	}
+}

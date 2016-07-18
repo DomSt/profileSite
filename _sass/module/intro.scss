@@ -46,7 +46,7 @@
   }
 }
 
-@include respond-to(xlarge) {
+@include respond-to(xlarge, 42rem) {
   .intro {
     padding-left: 20%;
     font-size: 1.5rem;
