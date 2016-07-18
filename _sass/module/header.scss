@@ -38,11 +38,13 @@
 	}
 }
 
-@include respond-to(xlarge, 42rem) {
+@media screen and (min-height: 800px) {
 	.pageHeader {
 		top: 4.5rem;
 	}
+}
 
+@include respond-to(xlarge) {
 	.logo__text {
 		font-size: 1.25rem;
 	}
