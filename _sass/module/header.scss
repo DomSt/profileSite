@@ -10,7 +10,7 @@
 	width: 4.5em;
 	height: 3em;
 	border-radius: 0 $border-radius $border-radius 0;
-	background: $c-main;
+	@include bgEffect();
 
 	&__text {
 	padding-right: 1em;

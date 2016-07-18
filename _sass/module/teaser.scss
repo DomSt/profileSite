@@ -8,7 +8,8 @@
 	font-family: "Anonymous Pro", monospace;
 	text-align: center;
 	border-radius: $border-radius;
-	background: $c-main;
+	@include bgEffect($c-main, 2.5%);
+	// background: $c-main;
 
 	&__title {
 		font-size: 1.25rem;

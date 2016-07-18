@@ -14,3 +14,11 @@
         + "Please use values defined in `$breakpoints` map.";
   }
 }
+
+
+//------------------------------------------------------------------------------
+// Background
+@mixin bgEffect($color: $c-main, $lighten: 5%, $angle: -45deg) {
+  background: $color;
+  background: linear-gradient($angle, lighten($color, $lighten) 50%, $color 50%);
+}
