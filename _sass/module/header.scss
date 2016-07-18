@@ -21,3 +21,19 @@
 	text-align: right;
 	}
 }
+
+
+//------------------------------------------------------------------------------
+// MEDIA QUERIES
+
+@include respond-to(xsmall) {
+	.logo__text {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (min-height: 640px) {
+	.pageHeader {
+		top: 3rem;
+	}
+}

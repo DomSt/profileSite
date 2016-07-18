@@ -16,10 +16,11 @@ $border-radius: 2px;
 
 
 //------------------------------------------------------------------------------
-// Media Querie Breakpoints   468px | 630px | 900px | 1170px
+// Media Querie Breakpoints   368px | 464px | 640px | 896px | 1152px
 $breakpoints: (
-  "small"   : 26rem,
-  "medium"  : 35rem,
-  "large"   : 50rem,
-  "xlarge"  : 65rem
+  "xsmall"  : 23rem,
+  "small"   : 29rem,
+  "medium"  : 40rem,
+  "large"   : 56rem,
+  "xlarge"  : 72rem
 );

@@ -2,7 +2,7 @@
 
 //------------------------------------------------------------------------------
 // Media Queries
-@mixin respond-to($breakpoint, $height: 450px) {
+@mixin respond-to($breakpoint, $height: 28rem) {
   $value: map-get($breakpoints, $breakpoint);
 
   @if $value != null {
