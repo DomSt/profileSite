@@ -7,7 +7,7 @@
 }
 
 .logo {
-	@include bgEffect($c-main, 7.5%, 45deg);
+	@include bgEffect($c-main, 7.5%, -135deg);
 	padding-right: .75em;
 	padding-left: .75em;
 	text-align: center;
