@@ -21,22 +21,33 @@
 //MEDIA QUERIES
 
 @include respond-to(xsmall) {
-  .intro {
-    padding-left: 10%;
-    width: 90%;
-  }
+ .intro {
+   padding-left: 10%;
+   width: 90%;
+ }
 }
 
 @include respond-to(small) {
+ .intro {
+   width: 80%;
+ }
+}
+
+@include respond-to(medium, 30rem) {
+ .intro {
+   width: 70%;
+ }
+}
+
+@include respond-to(xmedium) {
   .intro {
-    width: 80%;
+    padding-left: 15%;
   }
 }
 
-@include respond-to(medium) {
+@include respond-to(xmedium, 40rem) {
   .intro {
-    width: 70%;
-
+    font-size: 1.25rem;
   }
 }
 
@@ -48,7 +59,6 @@
 
 @include respond-to(xlarge, 42rem) {
   .intro {
-    padding-left: 20%;
     font-size: 1.5rem;
   }
 }

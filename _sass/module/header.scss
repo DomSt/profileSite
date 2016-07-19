@@ -25,27 +25,28 @@
 
 //------------------------------------------------------------------------------
 // MEDIA QUERIES
-
-@include respond-to(xsmall) {
-	.logo__text {
-		font-size: 1rem;
-	}
-}
-
-@media screen and (min-height: 640px) {
+@include respond-to(small, 40rem) {
 	.pageHeader {
 		top: 3rem;
 	}
 }
 
-@media screen and (min-height: 800px) {
+@include respond-to(medium) {
 	.pageHeader {
-		top: 4.5rem;
+		top: 3rem;
 	}
 }
 
-@include respond-to(xlarge) {
+@include respond-to(xmedium, 40rem) {
 	.logo__text {
-		font-size: 1.25rem;
+		font-size: 1rem;
+  }
+}
+
+@include respond-to(large, 36rem) {
+	.logo__text {
+		padding-right: 1.5em;
+		padding-left: 3em;
+		font-size: 1rem;
 	}
 }
