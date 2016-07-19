@@ -12,3 +12,13 @@
 .l-pageContent {
 	flex: 1;
 }
+
+
+//------------------------------------------------------------------------------
+// MEDIA QUERIES
+
+@include respond-to(xmedium, 36rem) {
+	.l-pageWrapper {
+		margin: 1.5rem;
+	}
+}
