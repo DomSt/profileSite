@@ -18,7 +18,7 @@
 
 //------------------------------------------------------------------------------
 // Background
-@mixin bgEffect($color: $c-main, $lighten: 5%, $angle: -45deg) {
+@mixin bgEffect($color: $c-main, $lighten: 7.5%, $angle: -45deg) {
   background: $color;
   background: linear-gradient($angle, lighten($color, $lighten) 50%, $color 50%);
 }

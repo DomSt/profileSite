@@ -8,7 +8,7 @@
 	font-family: "Anonymous Pro", monospace;
 	text-align: center;
 	border-radius: $border-radius;
-	@include bgEffect($c-main, 2.5%);
+	@include bgEffect($c-main, 5%);
 
 	&__info {
 		margin-top: .75rem;
