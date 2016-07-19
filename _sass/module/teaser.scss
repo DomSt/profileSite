@@ -1,6 +1,7 @@
 
 
 .teaser {
+	@include bgEffect($c-main, 5%);
 	margin: 3rem auto;
 	padding: 1.5rem;
 	width: 62.5%;
@@ -8,7 +9,6 @@
 	font-family: "Anonymous Pro", monospace;
 	text-align: center;
 	border-radius: $border-radius;
-	@include bgEffect($c-main, 5%);
 
 	&__info {
 		margin-top: .75rem;

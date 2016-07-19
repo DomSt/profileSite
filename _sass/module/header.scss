@@ -2,23 +2,27 @@
 
 .pageHeader {
 	position: absolute;
-	top: 1.5rem;
+	top: 7.5vh;
 	left: 0;
 }
 
 .logo {
-	border-radius: 0 $border-radius $border-radius 0;
-	@include bgEffect();
+	@include bgEffect($c-main, 7.5%, 45deg);
+	padding-right: .75em;
+	padding-left: .75em;
+	text-align: center;
+	border-radius: $border-radius $border-radius 0 0;
+	transform-origin: bottom left;
+	transform: rotate(90deg)
+						 translateX(-50%);
+
 
 	&__text {
-	padding-right: .75em;
-	padding-left: 1.5em;
-	color: $c-white;
-	font-size: .75rem;
-	font-weight: 800;
-	line-height: 3em;
-	letter-spacing: -.05em;
-	text-align: right;
+		color: $c-white;
+		font-size: .75rem;
+		font-weight: 800;
+		line-height: 3em;
+		letter-spacing: -.05em;
 	}
 }
 
@@ -27,13 +31,26 @@
 // MEDIA QUERIES
 @include respond-to(small, 40rem) {
 	.pageHeader {
-		top: 3rem;
+		top: 12.5vh;
 	}
 }
 
+@include respond-to(small) {
+	.logo {
+		@include bgEffect();
+		transform: rotate(0)
+							 translateX(0);
+	}
+}
+
+
 @include respond-to(medium) {
 	.pageHeader {
-		top: 3rem;
+		top: 12.5vh;
+	}
+
+	.logo {
+		padding-left: 1.5em;
 	}
 }
 
@@ -44,9 +61,12 @@
 }
 
 @include respond-to(large, 36rem) {
-	.logo__text {
-		padding-right: 1.5em;
+	.logo {
 		padding-left: 3em;
+		padding-right: 1.5em;
+	}
+
+	.logo__text {
 		font-size: 1rem;
 	}
 }
