@@ -46,6 +46,7 @@
   }
 }
 
+@include respond-to(large, medium) {
   .intro {
     font-size: 1.25rem;
   }

@@ -60,6 +60,7 @@
   }
 }
 
+@include respond-to(large, medium) {
 	.logo {
 		padding-left: 3em;
 		padding-right: 1.5em;
