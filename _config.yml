@@ -21,4 +21,7 @@ github_username:  DomSt
 
 # Build settings
 markdown: kramdown
+kramdown:
+  auto_ids: false
+  
 permalink: :title
