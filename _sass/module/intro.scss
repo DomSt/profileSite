@@ -54,6 +54,7 @@
 
 @include respond-to(xlarge, xtall) {
   .intro {
+    width: 60%;
     font-size: 1.5rem;
   }
 }
