@@ -30,7 +30,7 @@
  }
 }
 
-@include respond-to(medium, 30rem) {
+@include respond-to(medium) {
  .intro {
    width: 70%;
  }
@@ -40,19 +40,18 @@
 
 }
 
-@include respond-to(xmedium, 40rem) {
+@include respond-to(xmedium, tall) {
   .intro {
     font-size: 1.25rem;
   }
 }
 
-@include respond-to(large, 36rem) {
   .intro {
     font-size: 1.25rem;
   }
 }
 
-@include respond-to(xlarge, 42rem) {
+@include respond-to(xlarge, xtall) {
   .intro {
     font-size: 1.5rem;
   }

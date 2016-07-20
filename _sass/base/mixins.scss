@@ -2,15 +2,16 @@
 
 //------------------------------------------------------------------------------
 // Media Queries
-@mixin respond-to($breakpoint, $height: 28rem) {
-  $value: map-get($breakpoints, $breakpoint);
+@mixin respond-to($h-breakpoint, $v-breakpoint: low) {
+  $h-value: map-get($h-breakpoints, $h-breakpoint);
+  $v-value: map-get($v-breakpoints, $v-breakpoint);
 
-  @if $value != null {
-    @media screen and (min-width: $value) and (min-height: $height) {
+  @if $h-value != null {
+    @media screen and (min-width: $h-value) and (min-height: $v-value) {
       @content;
     }
   } @else {
-    @warn "No value retrieved from `#{$breakpoint}`. "
+    @warn "No value retrieved from `#{$h-breakpoint}`. "
         + "Please use values defined in `$breakpoints` map.";
   }
 }

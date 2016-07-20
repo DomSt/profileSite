@@ -16,12 +16,21 @@ $border-radius: 2px;
 
 
 //------------------------------------------------------------------------------
-// Media Querie Breakpoints   352px | 480px | 640px | 720px | 880px | 1120px
-$breakpoints: (
+// Media Querie Horizontal Breakpoints
+// 352px | 480px | 640px | 720px | 880px | 1120px
+$h-breakpoints: (
   "xsmall"  : 22rem,
   "small"   : 30rem,
   "medium"  : 40rem,
   "xmedium" : 45rem,
   "large"   : 55rem,
   "xlarge"  : 70rem
+);
+
+// Media Querie Vertical Breakpoints
+// 480px | 560px | 640px | 720px
+$v-breakpoints: (
+  "low"    : 30rem,
+  "tall"   : 40rem,
+  "xtall"  : 45rem
 );
