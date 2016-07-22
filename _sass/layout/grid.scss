@@ -60,9 +60,18 @@
 //-----------------------------------------------------------------
 // Group Element Modifier
 [class*="group"] {
+  // Column
+  &[class*="--column"] {
+    flex-direction: column;
+  }
+
   // Sorting
   &[class*="--reverse"] {
     flex-direction: row-reverse;
+  }
+
+  &[class*="--columnReverse"] {
+    flex-direction: column-reverse;;
   }
 
   // Positioning
