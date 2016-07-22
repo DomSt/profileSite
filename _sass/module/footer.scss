@@ -1,10 +1,8 @@
 
 
 .pageFooter {
-	// width: 30%;
 	margin-top: 1.5rem;
 	margin-bottom: 1.5rem;
-
 
 	&__disclaimer {
 		border-top: 1px dashed;
@@ -29,7 +27,9 @@
 	.pageFooter {
 		margin-top: 4.5rem;
 		margin-bottom: 1.5rem;
-		// width: 40%;
-		font-size: .75rem;
+
+		&__disclaimer {
+			font-size: .75rem;
+		}
 	}
 }
