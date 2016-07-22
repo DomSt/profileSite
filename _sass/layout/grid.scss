@@ -7,7 +7,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(magenta, .025);
-  /*display: none;*/
+  pointer-events: none;
+  display: none;
 }
 
 .gridSystemTest__group {
@@ -48,6 +49,11 @@
   flex-wrap: wrap;
   margin-right: -1 * $baseMargin;
   margin-left: -1 * $baseMargin;
+
+  @include respond-to("medium") {
+    margin-right: -1 * ($baseMargin * 2);
+    margin-left: -1 * ($baseMargin * 2);
+  }
 }
 
 
@@ -92,6 +98,10 @@
   &[class*="--between"] {
     justify-content: space-between;
   }
+
+  &[class*="--collapse"] {
+    margin: 0;
+  }
 }
 
 
@@ -111,8 +121,8 @@
 .cell-11,
 .cell-12 {
   flex: 0 0 auto;
-  padding-right: $basePadding;
-  padding-left: $basePadding;
+  padding-right: $baseMargin;
+  padding-left: $baseMargin;
 }
 
 .cell {
@@ -154,8 +164,8 @@
   .cell-sm-11,
   .cell-sm-12 {
     flex: 0 0 auto;
-    padding-right: $basePadding;
-    padding-left: $basePadding;
+    padding-right: $baseMargin;
+    padding-left: $baseMargin;
   }
 
   .cell-sm {
@@ -198,8 +208,8 @@
   .cell-md-11,
   .cell-md-12 {
     flex: 0 0 auto;
-    padding-right: $basePadding;
-    padding-left: $basePadding;
+    padding-right: $baseMargin;
+    padding-left: $baseMargin;
   }
 
   .cell-md {
@@ -242,8 +252,8 @@
   .cell-lg-11,
   .cell-lg-12 {
     flex: 0 0 auto;
-    padding-right: $basePadding;
-    padding-left: $basePadding;
+    padding-right: $baseMargin;
+    padding-left: $baseMargin;
   }
 
   .cell-lg {
@@ -286,8 +296,8 @@
   .cell-xl-11,
   .cell-xl-12 {
     flex: 0 0 auto;
-    padding-right: $basePadding;
-    padding-left: $basePadding;
+    padding-right: $baseMargin;
+    padding-left: $baseMargin;
   }
 
   .cell-xl {
@@ -335,7 +345,7 @@
   }
 
   &[class*="--expand"] {
-    padding-top: $basePadding;
-    padding-bottom: $basePadding;
+    padding-top: $baseMargin;
+    padding-bottom: $baseMargin;
   }
 }

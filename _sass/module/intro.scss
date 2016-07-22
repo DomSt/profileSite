@@ -7,8 +7,8 @@
   min-height: calc(100vh - 4rem);
   margin-top: 2rem;
   margin-bottom: 2rem;
-  margin-left: 15%;
-  width: 80%;
+  // margin-left: 15%;
+  // width: 80%;
   font-size: 1rem;
 
   & p {
@@ -26,13 +26,13 @@
 
 @include respond-to(small) {
  .intro {
-   width: 80%;
+  //  width: 80%;
  }
 }
 
 @include respond-to(medium) {
  .intro {
-   width: 70%;
+  //  width: 70%;
  }
 }
 
@@ -54,7 +54,7 @@
 
 @include respond-to(xlarge, xtall) {
   .intro {
-    width: 60%;
+    // width: 60%;
     font-size: 1.5rem;
   }
 }

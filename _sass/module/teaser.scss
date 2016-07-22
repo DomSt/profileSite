@@ -2,8 +2,8 @@
 
 .teaser {
 	@include bgEffect($c-main, 5%);
-	width: 60%;
-	margin: 3rem auto;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 	padding: 1.5rem;
 	color: $c-white;
 	font-family: "Anonymous Pro", monospace;
@@ -26,7 +26,6 @@
 
 @include respond-to(medium) {
 	.teaser {
-		width: 50%;
 		margin-bottom: 4.5rem;
 	}
 }

@@ -1,12 +1,17 @@
 
 
 .pageFooter {
-	width: 30%;
-	margin: 1.5rem auto 0;
-	border-top: 1px dashed;
-	font-size: .66667rem;
-	text-align: center;
-	line-height: 3rem;
+	// width: 30%;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+
+
+	&__disclaimer {
+		border-top: 1px dashed;
+		font-size: .66667rem;
+		text-align: center;
+		line-height: 3rem;
+	}
 }
 
 
@@ -24,7 +29,7 @@
 	.pageFooter {
 		margin-top: 4.5rem;
 		margin-bottom: 1.5rem;
-		width: 40%;
+		// width: 40%;
 		font-size: .75rem;
 	}
 }

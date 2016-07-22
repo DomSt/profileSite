@@ -2,8 +2,8 @@
 
 .pageHeader {
 	position: absolute;
-	top: 7.5vh;
-	left: 0;
+	top: calc(7.5vh - $baseMargin);
+	left: 0 - $baseMargin;
 }
 
 .logo {
@@ -47,7 +47,8 @@
 
 @include respond-to(medium) {
 	.pageHeader {
-		top: 12.5vh;
+		top: calc(12.5vh - ($baseMargin * 2));
+		left: 0 - ($baseMargin * 2);
 	}
 
 	.logo {
