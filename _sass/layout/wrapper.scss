@@ -2,13 +2,9 @@
 
 .pageWrapper {
 	position: relative;
-	min-height: calc(100vh - $baseMargin);
+	min-height: calc(100vh - #{$baseMargin});
 	margin: $baseMargin;
 	border-radius: $border-radius;
-
-	@include respond-to("medium") {
-    margin: $baseMargin * 2;
-  }
 }
 
 .pageContent {
@@ -18,6 +14,12 @@
 
 //------------------------------------------------------------------------------
 // MEDIA QUERIES
+
+@include respond-to(medium) {
+	.pageWrapper {
+		margin: $baseMargin * 2;
+	}
+}
 
 @include respond-to(xmedium, medium) {
 	.pageWrapper {

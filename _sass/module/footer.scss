@@ -1,7 +1,7 @@
 
 
 .pageFooter {
-	margin-top: $baseMargin * 2;
+	margin-top: $baseMargin * 4;
 	margin-bottom: $baseMargin;
 
 	&__disclaimer {
@@ -18,15 +18,15 @@
 
 @include respond-to(medium) {
 	.pageFooter {
-		margin-top: $baseMargin * 3;
-		margin-bottom: $baseMargin * 2;
+		margin-top: $baseMargin * 6;
+		margin-bottom: $baseMargin * 4;
 	}
 }
 
 @include respond-to(large) {
 	.pageFooter {
-		margin-top: $baseMargin * 5;
-		margin-bottom: $baseMargin * 3;
+		margin-top: $baseMargin * 10;
+		margin-bottom: $baseMargin * 6;
 
 		&__disclaimer {
 			font-size: .75rem;

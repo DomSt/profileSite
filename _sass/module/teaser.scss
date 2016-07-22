@@ -2,8 +2,8 @@
 
 .teaser {
 	@include bgEffect($c-main, 5%);
-	margin-top: $baseMargin * 3;
-	margin-bottom: $baseMargin * 3;
+	margin-top: $baseMargin * 6;
+	margin-bottom: $baseMargin * 6;
 	padding: $basePadding * 2;
 	color: $c-white;
 	font-family: "Anonymous Pro", monospace;
@@ -26,13 +26,13 @@
 
 @include respond-to(medium) {
 	.teaser {
-		margin-bottom: $baseMargin * 4;
+		margin-bottom: $baseMargin * 8;
 	}
 }
 
 @include respond-to(large, medium) {
 	.teaser {
-		margin-bottom: $baseMargin * 6;
+		margin-bottom: $baseMargin * 12;
 		font-size: 1.25rem;
 	}
 }
