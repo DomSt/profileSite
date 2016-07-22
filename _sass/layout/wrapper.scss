@@ -21,6 +21,6 @@
 
 @include respond-to(xmedium, medium) {
 	.pageWrapper {
-		min-height: calc(100vh - ($baseMargin * 2));
+		min-height: calc(100vh - (#{$baseMargin} * 2));
 	}
 }

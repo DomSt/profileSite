@@ -1,14 +1,14 @@
 
 
 .pageFooter {
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
+	margin-top: $baseMargin * 2;
+	margin-bottom: $baseMargin;
 
 	&__disclaimer {
 		border-top: 1px dashed;
 		font-size: .66667rem;
 		text-align: center;
-		line-height: 3rem;
+		line-height: 2;
 	}
 }
 
@@ -18,15 +18,15 @@
 
 @include respond-to(medium) {
 	.pageFooter {
-		margin-top: 3rem;
-		margin-bottom: 1.5rem;
+		margin-top: $baseMargin * 3;
+		margin-bottom: $baseMargin * 2;
 	}
 }
 
 @include respond-to(large) {
 	.pageFooter {
-		margin-top: 4.5rem;
-		margin-bottom: 1.5rem;
+		margin-top: $baseMargin * 5;
+		margin-bottom: $baseMargin * 3;
 
 		&__disclaimer {
 			font-size: .75rem;

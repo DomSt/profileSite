@@ -2,8 +2,8 @@
 
 .intro {
   min-height: 100vh;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: $basePadding * 2;
+  padding-bottom: $basePadding * 2;
   font-size: 1rem;
 
   & p {
@@ -14,22 +14,6 @@
 
 //------------------------------------------------------------------------------
 //MEDIA QUERIES
-
-@include respond-to(xsmall) {
-
-}
-
-@include respond-to(small) {
-
-}
-
-@include respond-to(medium) {
-
-}
-
-@include respond-to(xmedium) {
-
-}
 
 @include respond-to(xmedium, tall) {
   .intro {
