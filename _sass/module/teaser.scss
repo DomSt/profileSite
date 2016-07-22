@@ -2,9 +2,9 @@
 
 .teaser {
 	@include bgEffect($c-main, 5%);
+	width: 60%;
 	margin: 3rem auto;
 	padding: 1.5rem;
-	width: 62.5%;
 	color: $c-white;
 	font-family: "Anonymous Pro", monospace;
 	text-align: center;
