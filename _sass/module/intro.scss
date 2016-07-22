@@ -1,14 +1,9 @@
 
 
 .intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: calc(100vh - 4rem);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: 15%;
-  width: 80%;
+  min-height: 100vh;
+  padding-top: $basePadding * 2;
+  padding-bottom: $basePadding * 2;
   font-size: 1rem;
 
   & p {
@@ -19,26 +14,6 @@
 
 //------------------------------------------------------------------------------
 //MEDIA QUERIES
-
-@include respond-to(xsmall) {
-
-}
-
-@include respond-to(small) {
- .intro {
-   width: 80%;
- }
-}
-
-@include respond-to(medium) {
- .intro {
-   width: 70%;
- }
-}
-
-@include respond-to(xmedium) {
-
-}
 
 @include respond-to(xmedium, tall) {
   .intro {
@@ -54,7 +29,6 @@
 
 @include respond-to(xlarge, xtall) {
   .intro {
-    width: 60%;
     font-size: 1.5rem;
   }
 }

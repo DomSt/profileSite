@@ -2,8 +2,8 @@
 
 .pageHeader {
 	position: absolute;
-	top: 7.5vh;
-	left: 0;
+	top: calc(7.5vh - #{$baseMargin});
+	left: 0 - $baseMargin;
 }
 
 .logo {
@@ -21,7 +21,7 @@
 		color: $c-white;
 		font-size: .75rem;
 		font-weight: 800;
-		line-height: 3em;
+		line-height: 3;
 		letter-spacing: -.05em;
 	}
 }
@@ -31,7 +31,7 @@
 // MEDIA QUERIES
 @include respond-to(small, tall) {
 	.pageHeader {
-		top: 12.5vh;
+		top: calc(12.5vh - #{$baseMargin});
 	}
 }
 
@@ -47,7 +47,8 @@
 
 @include respond-to(medium) {
 	.pageHeader {
-		top: 12.5vh;
+		top: calc(12.5vh - (#{$baseMargin} * 2));
+		left: 0 - ($baseMargin * 2);
 	}
 
 	.logo {

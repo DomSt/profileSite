@@ -1,15 +1,13 @@
 
 
-.l-pageWrapper {
-	display: flex;
-	flex-direction: column;
-	margin: .75rem;
-	min-height: calc(100vh - 1.5rem);
+.pageWrapper {
+	position: relative;
+	min-height: calc(100vh - #{$baseMargin});
+	margin: $baseMargin;
 	border-radius: $border-radius;
 }
 
-.l-pageContent {
-	flex: 1;
+.pageContent {
 	background: $c-white;
 }
 
@@ -17,9 +15,14 @@
 //------------------------------------------------------------------------------
 // MEDIA QUERIES
 
+@include respond-to(medium) {
+	.pageWrapper {
+		margin: $baseMargin * 2;
+	}
+}
+
 @include respond-to(xmedium, medium) {
-	.l-pageWrapper {
-		margin: 1.5rem;
-		min-height: calc(100vh - 3rem);
+	.pageWrapper {
+		min-height: calc(100vh - (#{$baseMargin} * 2));
 	}
 }
