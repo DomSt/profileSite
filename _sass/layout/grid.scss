@@ -1,0 +1,341 @@
+//-----------------------------------------------------------------
+// Grid System Test
+.gridSystemTest {
+  position: absolute;;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(magenta, .025);
+  /*display: none;*/
+}
+
+.gridSystemTest__group {
+  height: 100%;
+}
+
+.gridSystemTest__cell {
+  background: rgba(cyan, .2);
+  border-left: 1px solid rgba(magenta, .2);
+
+  &:last-child {
+    border-right: 1px solid rgba(magenta, .2);
+  }
+}
+
+
+//-----------------------------------------------------------------
+// Frame Element
+.frame {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $basePadding;
+  padding-left: $basePadding;
+
+  @include respond-to("medium") {
+    padding-right: $basePadding * 2;
+    padding-left: $basePadding * 2;
+  }
+}
+
+
+//-----------------------------------------------------------------
+// Group Element
+.group {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -1 * $baseMargin;
+  margin-left: -1 * $baseMargin;
+}
+
+
+//-----------------------------------------------------------------
+// Group Element Modifier
+[class*="group"] {
+  // Sorting
+  &[class*="--reverse"] {
+    flex-direction: row-reverse;
+  }
+
+  // Positioning
+  &[class*="--start"] {
+    justify-content: flex-start;
+  }
+
+  &[class*="--center"] {
+    justify-content: center;
+  }
+
+  &[class*="--end"] {
+    justify-content: flex-end;
+  }
+
+  &[class*="--top"] {
+    align-items: flex-start;
+  }
+
+  &[class*="--middle"] {
+    align-items: center;
+  }
+
+  &[class*="--bottom"] {
+    align-items: flex-end;
+  }
+
+  // Distribution
+  &[class*="--around"] {
+    justify-content: space-around;
+  }
+
+  &[class*="--between"] {
+    justify-content: space-between;
+  }
+}
+
+
+//-----------------------------------------------------------------
+// Base Cell Generator
+.cell,
+.cell-1,
+.cell-2,
+.cell-3,
+.cell-4,
+.cell-5,
+.cell-6,
+.cell-7,
+.cell-8,
+.cell-9,
+.cell-10,
+.cell-11,
+.cell-12 {
+  flex: 0 0 auto;
+  padding-right: $basePadding;
+  padding-left: $basePadding;
+}
+
+.cell {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.cell--offset-0 {
+  margin-left: 0;
+}
+
+@for $i from 1 through $cellCount {
+  .cell-#{$i} {
+    flex-basis: (100% / $cellCount) * $i;
+    max-width: (100% / $cellCount) * $i;
+  }
+
+  .cell--offset-#{$i} {
+    margin-left: (100% / $cellCount) * $i;
+  }
+}
+
+
+//-----------------------------------------------------------------
+// SM Cell Generator
+@include respond-to("small") {
+  .cell-sm,
+  .cell-sm-1,
+  .cell-sm-2,
+  .cell-sm-3,
+  .cell-sm-4,
+  .cell-sm-5,
+  .cell-sm-6,
+  .cell-sm-7,
+  .cell-sm-8,
+  .cell-sm-9,
+  .cell-sm-10,
+  .cell-sm-11,
+  .cell-sm-12 {
+    flex: 0 0 auto;
+    padding-right: $basePadding;
+    padding-left: $basePadding;
+  }
+
+  .cell-sm {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .cell-sm--offset-0 {
+    margin-left: 0;
+  }
+
+  @for $i from 1 through $cellCount-sm {
+    .cell-sm-#{$i} {
+      flex-basis: (100% / $cellCount-sm) * $i;
+      max-width: (100% / $cellCount-sm) * $i;
+    }
+
+    .cell-sm--offset-#{$i} {
+      margin-left: (100% / $cellCount-sm) * $i;
+    }
+  }
+}
+
+
+//-----------------------------------------------------------------
+// MD Cell Generator
+@include respond-to("medium") {
+  .cell-md,
+  .cell-md-1,
+  .cell-md-2,
+  .cell-md-3,
+  .cell-md-4,
+  .cell-md-5,
+  .cell-md-6,
+  .cell-md-7,
+  .cell-md-8,
+  .cell-md-9,
+  .cell-md-10,
+  .cell-md-11,
+  .cell-md-12 {
+    flex: 0 0 auto;
+    padding-right: $basePadding;
+    padding-left: $basePadding;
+  }
+
+  .cell-md {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .cell-md--offset-0 {
+    margin-left: 0;
+  }
+
+  @for $i from 1 through $cellCount-md {
+    .cell-md-#{$i} {
+      flex-basis: (100% / $cellCount-md) * $i;
+      max-width: (100% / $cellCount-md) * $i;
+    }
+
+    .cell-md--offset-#{$i} {
+      margin-left: (100% / $cellCount-md) * $i;
+    }
+  }
+}
+
+
+//-----------------------------------------------------------------
+// LG Cell Generator
+@include respond-to("large") {
+  .cell-lg,
+  .cell-lg-1,
+  .cell-lg-2,
+  .cell-lg-3,
+  .cell-lg-4,
+  .cell-lg-5,
+  .cell-lg-6,
+  .cell-lg-7,
+  .cell-lg-8,
+  .cell-lg-9,
+  .cell-lg-10,
+  .cell-lg-11,
+  .cell-lg-12 {
+    flex: 0 0 auto;
+    padding-right: $basePadding;
+    padding-left: $basePadding;
+  }
+
+  .cell-lg {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .cell-lg--offset-0 {
+    margin-left: 0;
+  }
+
+  @for $i from 1 through $cellCount-lg {
+    .cell-lg-#{$i} {
+      flex-basis: (100% / $cellCount-lg) * $i;
+      max-width: (100% / $cellCount-lg) * $i;
+    }
+
+    .cell-lg--offset-#{$i} {
+      margin-left: (100% / $cellCount-lg) * $i;
+    }
+  }
+}
+
+
+//-----------------------------------------------------------------
+// XL Cell Generator
+@include respond-to("xlarge") {
+  .cell-xl,
+  .cell-xl-1,
+  .cell-xl-2,
+  .cell-xl-3,
+  .cell-xl-4,
+  .cell-xl-5,
+  .cell-xl-6,
+  .cell-xl-7,
+  .cell-xl-8,
+  .cell-xl-9,
+  .cell-xl-10,
+  .cell-xl-11,
+  .cell-xl-12 {
+    flex: 0 0 auto;
+    padding-right: $basePadding;
+    padding-left: $basePadding;
+  }
+
+  .cell-xl {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .cell-xl--offset-0 {
+    margin-left: 0;
+  }
+
+  @for $i from 1 through $cellCount-xl {
+    .cell-xl-#{$i} {
+      flex-basis: (100% / $cellCount-xl) * $i;
+      max-width: (100% / $cellCount-xl) * $i;
+    }
+
+    .cell-xl--offset-#{$i} {
+      margin-left: (100% / $cellCount-xl) * $i;
+    }
+  }
+}
+
+
+//-----------------------------------------------------------------
+// Cell Element Modifier
+
+[class*="cell"] {
+  // Sorting
+  &[class*="--reverse"] {
+    flex-direction: column-reverse;
+  }
+
+  &[class*="--first"] {
+    order: -1;
+  }
+
+  &[class*="--last"] {
+    order: 1;
+  }
+
+  &[class*="--collapse"] {
+    padding: 0;
+  }
+
+  &[class*="--expand"] {
+    padding-top: $basePadding;
+    padding-bottom: $basePadding;
+  }
+}
