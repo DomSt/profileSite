@@ -1,10 +1,17 @@
 
 
 .intro {
-  min-height: 100vh;
-  padding-top: $basePadding * 2;
-  padding-bottom: $basePadding * 2;
+  min-height: calc(100vh - (2 * #{$baseMargin}));
   font-size: 1rem;
+
+  &:not(:last-child) {
+    margin-bottom: $baseMargin;
+  }
+
+  &__part {
+    padding-top: $basePadding * 2;
+    padding-bottom: $basePadding * 2;
+  }
 
   & p {
     margin-bottom: 1em;
@@ -14,21 +21,26 @@
 
 //------------------------------------------------------------------------------
 //MEDIA QUERIES
-
-@include respond-to(xmedium, tall) {
+@include respond-to(small) {
   .intro {
     font-size: 1.25rem;
+  }
+}
+
+@include respond-to(medium, tall) {
+  .intro {
+    font-size: 1.5rem;
   }
 }
 
 @include respond-to(large, medium) {
   .intro {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
   }
 }
 
 @include respond-to(xlarge, xtall) {
   .intro {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
