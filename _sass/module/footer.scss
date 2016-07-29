@@ -1,8 +1,11 @@
 
 
 .pageFooter {
-	margin-top: $baseMargin * 4;
-	margin-bottom: $baseMargin;
+	position: fixed;
+	z-index: -1;
+	right: 0;
+	bottom: 0;
+	left: 0;
 
 	&__disclaimer {
 		border-top: 1px dashed;
@@ -16,17 +19,8 @@
 //------------------------------------------------------------------------------
 // MEDIA QUERIES
 
-@include respond-to(medium) {
-	.pageFooter {
-		margin-top: $baseMargin * 6;
-		margin-bottom: $baseMargin * 4;
-	}
-}
-
 @include respond-to(large) {
 	.pageFooter {
-		margin-top: $baseMargin * 10;
-		margin-bottom: $baseMargin * 6;
 
 		&__disclaimer {
 			font-size: .75rem;
