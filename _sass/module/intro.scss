@@ -17,7 +17,7 @@
       display: block;
       position: absolute;
       left: 0;
-      width: calc((100% / #{$cellCount}) / 2);
+      width: calc((100% / #{$cellCount}) / 2 + #{$baseMargin});
       height: .1rem;
       background: $c-main;
       border-radius: 0 $border-radius $border-radius 0;
@@ -39,6 +39,12 @@
 
   .intro__part::before {
     height: .125rem;
+  }
+}
+
+@include respond-to(medium) {
+  .intro__part::before {
+    width: calc((100% / #{$cellCount}) / 2 + (2* #{$baseMargin}));
   }
 }
 

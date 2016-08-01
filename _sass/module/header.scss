@@ -4,11 +4,14 @@
 	position: fixed;
 	top: 7.5vh;
 	left: 0;
+	z-index: 100;
+	width: 100%;
 }
 
 .logo {
-	padding-right: .75em;
-	padding-left: .75em;
+	width: calc(100% / #{$cellCount} + #{$basePadding});
+	min-width: 46px;
+	margin-left: -1 * $basePadding;
 	text-align: center;
 	background: $c-main;
 	border-radius: $border-radius $border-radius 0 0;
@@ -37,6 +40,10 @@
 
 @include respond-to(small) {
 	.logo {
+		width: calc(100% / #{$cellCount} + #{$basePadding});
+		margin-left: -1 * $basePadding;
+		padding-right: $basePadding;
+		text-align: right;
 		border-radius: 0 $border-radius $border-radius 0;
 		transform: rotate(0)
 							 translateX(0);
@@ -51,7 +58,8 @@
 	}
 
 	.logo {
-		padding-left: 1.5em;
+		width: calc(100% / #{$cellCount} + (2 * #{$basePadding}));
+		margin-left: -2 * $basePadding;
 	}
 }
 
@@ -63,8 +71,8 @@
 
 @include respond-to(large, medium) {
 	.logo {
-		padding-left: 3em;
-		padding-right: 1.5em;
+		// padding-left: 3em;
+		// padding-right: 1.5em;
 	}
 
 	.logo__text {
