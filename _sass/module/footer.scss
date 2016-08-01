@@ -6,6 +6,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	margin-bottom: 1rem;
 
 	&__disclaimer {
 		border-top: 1px dashed;
@@ -21,6 +22,7 @@
 
 @include respond-to(large) {
 	.pageFooter {
+		margin-bottom: 2rem;
 
 		&__disclaimer {
 			font-size: .75rem;

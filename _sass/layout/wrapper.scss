@@ -9,7 +9,7 @@
 
 .pageContent {
 	background: $c-white;
-	margin-bottom: 6rem;
+	margin-bottom: 7rem;
 }
 
 
@@ -22,7 +22,7 @@
 	}
 
 	.pageContent {
-		margin-bottom: 8rem;
+		margin-bottom: 9rem;
 	}
 }
 
@@ -34,6 +34,6 @@
 
 @include respond-to(large) {
 	.pageContent {
-		margin-bottom: 10rem;
+		margin-bottom: 12rem;
 	}
 }
