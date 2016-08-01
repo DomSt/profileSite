@@ -23,9 +23,9 @@
 	&__text {
 		color: $c-white;
 		font-size: .75rem;
-		font-weight: 800;
+		font-weight: 600;
 		line-height: 3;
-		letter-spacing: -.05em;
+		letter-spacing: .125em;
 	}
 }
 
@@ -42,7 +42,7 @@
 	.logo {
 		width: calc(100% / #{$cellCount} + #{$basePadding});
 		margin-left: -1 * $basePadding;
-		padding-right: $basePadding;
+		padding-right: .5 * $basePadding;
 		text-align: right;
 		border-radius: 0 $border-radius $border-radius 0;
 		transform: rotate(0)
@@ -60,6 +60,7 @@
 	.logo {
 		width: calc(100% / #{$cellCount} + (2 * #{$basePadding}));
 		margin-left: -2 * $basePadding;
+		padding-right: $basePadding;
 	}
 }
 
